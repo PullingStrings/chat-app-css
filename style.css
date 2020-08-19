@@ -1,0 +1,38 @@
+
+.top-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.notch {
+  height: 5em;
+  background-color: hsl(264, 100%, 61%)
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.8fr 0.8fr 1.9fr 0.5fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1px 2px;
+  grid-template-areas: "arrow-icon image-icon . menu-icon" "arrow-icon image-icon name-and-notification-info menu-icon" "arrow-icon image-icon . menu-icon";
+}
+
+.arrow-icon { grid-area: arrow-icon; }
+
+.image-icon { grid-area: image-icon; }
+
+.menu-icon { grid-area: menu-icon; }
+
+.name-and-notification-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "Name Name Name" "notification-info notification-info notification-info";
+  grid-area: name-and-notification-info;
+}
+
+.Name { grid-area: Name; }
+
+.notification-info { grid-area: notification-info; }
